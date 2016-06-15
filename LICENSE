@@ -1,201 +1,236 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Happy Acres</title>
+<script type="text/javascript">
+var rt = "";
+var appUrl = "https://apps.facebook.com/happyacres/";
+//if(rt != "rt" && window == top && appUrl != "") top.location.href = appUrl;
 
-   1. Definitions.
+var serverUrl = "https://ff2-us.funplusgame.com/";
+var staticUrl = "https://d297281mgrzzms.cloudfront.net/v2/";
+var appId = "1429718607279626";
+var likePageId = "496231573836614";
+var snsid = "100005440955803";
+var userGetReqId="100005440955803";
+var hashed_id = "";
+var language = "ar";
+var paymentId = "76";
+//var paymentOfferUrl = "";
+var trialPayUrl = "https://payment.funplusgame.com/callback/trailpay_localcurrency/76/";
+var tp_vendor_id = "7S8EEU87";
+var redirectGameUrl = true;
+var userTutorialStep = "0";
+var ref = "ts";
 
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
+if(document.location.protocol == "http:") {
+    serverUrl = serverUrl.replace("https:", "http:");
+} else if(document.location.protocol == "https:") {
+    serverUrl = serverUrl.replace("http:", "https:");
+}
 
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
+var loadingtips = ["\u0627\u0644\u0627\u0631\u0628\u0627\u062d \u0627\u0644\u064a\u0648\u0645\u064a\u0629 \u064a\u0648\u062c\u062f \u0641\u064a \u0627\u0644\u062a\u0642\u0648\u064a\u0645 24 \u062c\u0627\u0626\u0632\u0629! \u0627\u062c\u0645\u0639\u0647\u0627 \u0643\u0644\u0647\u0627 \u062e\u0644\u0627\u0644 30 \u064a\u0648\u0645","\u0627\u0639\u062b\u0631 \u0639\u0644\u0649 \u0627\u0644\u0627\u0631\u0628\u0627\u062d \u0627\u0644\u064a\u0648\u0645\u064a\u0629 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0645\u062e\u0632\u0646 \u0627\u0644\u062e\u0627\u0635 \u0628\u0643 \u0639\u0645\u0644\u0627\u062a & \u062c\u0648\u0627\u0626\u0632 \u0627\u0644\u0627\u0644\u0645\u0627\u0633 \u0633\u064a\u062a\u0645 \u0627\u0636\u0627\u0641\u062a\u0647\u0627 \u0641\u064a \u0627\u0644\u062d\u0633\u0627\u0628 \u0645\u0628\u0627\u0634\u0631\u0629","\u0627\u0644\u0645\u062a\u0632\u0627\u064a\u062f \u064a\u062c\u0628 \u0623\u0646 \u064a\u062a\u0645 \u0627\u0644\u0627\u0646\u062a\u0647\u0627\u0621\u0627\u0644\u062f\u064a\u0643\u0648\u0631\u0627\u062a \u0634\u064a\u062f\u062a \u0627\u0644\u062a\u064a \u062a\u062a\u0637\u0644\u0628 \u0644\u062a\u0633\u062c\u064a\u0644\u0647\u0645 \u0641\u064a \u062d\u0627\u0644\u0629 \u062c\u0645\u0639"];
+var feedInfo = null;
+var rewardInfo = null;
+var initFlashVars = {"loading_path":"https:\/\/d297281mgrzzms.cloudfront.net\/v2\/versions\/38702\/loading\/loading_ar.swf","main_path":"https:\/\/d297281mgrzzms.cloudfront.net\/v2\/versions\/38777\/main\/en\/Main.swf","res_json":"https:\/\/d297281mgrzzms.cloudfront.net\/v2\/versions\/38560\/main\/en\/loading.json","json_url":"https:\/\/d297281mgrzzms.cloudfront.net\/v2\/versions\/38777.920\/c_ar_v.json","versions_url":"https:\/\/d297281mgrzzms.cloudfront.net\/v2\/versions\/38777.920\/v.json","startNow":0,"api_url":"https:\/\/ff2-us.funplusgame.com\/","img_url":"https:\/\/d297281mgrzzms.cloudfront.net\/v2\/","channelUrl":"https:\/\/ff2-us.funplusgame.com\/html\/channel.html","language":"ar","payment":"true","payment_id":"76","app_id":"1429718607279626","app_url":"https:\/\/apps.facebook.com\/happyacres\/","app_name":"happyacres","timestamp":1465989220,"admin":0,"showMask":0,"log":1,"log_url":"https%3A%2F%2Fclient-log.infra.funplus.net%2Flog%3Farchive%3D1%26es%3D1%26project%3Dha%26group%3Dus","name":"\u1ea8mr","pic_square":"https:\/\/scontent.xx.fbcdn.net\/hprofile-xpa1\/v\/t1.0-1\/p50x50\/12631533_474918036032891_4425098272477038769_n.jpg?oh=81cf778a4407b0fd8f186de05b2afc9d&oe=5724DADD","email":"","flashVersion":"38777.920","isMonsterDebug":0,"isHttps":0,"img_url2":"https:\/\/ff2-us-asset.s3.amazonaws.com\/v2\/","user_id":"100005440955803","hashed_id":"","guid":381814,"accessToken":"EAAUUUk23NgoBACLIrhGSEpGmfIko4mttrjZCTlxZC4pfTlrwBzEeSkmlx06tfZCEWemdjRutxi8gZBtYDNIvC5GMhK4RgKRh1doVB8NDKl8fMiZC6w3iwthV2FDQLoy5WkSIZBTLMZBubjetvZCOgKZAMGx4QVx4GrAsZD","shortToken":"EAAUUUk23NgoBAORldOuIyJPZB2bsnUH0fR3WIWR6Fo7KklzANszsR8LZC1sJ83BZCdwGh3vo2e91xXF61WbBZC4gm8ZAr2qe2UekYU82ZBmZBZChjZC9LAZBASHqwG8ZCHfwQZA0uZC6izF4h1KpYsOL1O1ZAIuN4DYZCObbojgsvHZCZA7EHsAZDZD","tutorialStep":0,"energyCheck":1,"session_key":"400015418D","secret":"69fd150320e794d665c678121e1f1e8c"};
+var mainSwf = "https://d297281mgrzzms.cloudfront.net/v2/versions/38777/main/en/Preloader.swf";
+var installpageUrl = "https://d297281mgrzzms.cloudfront.net/v2/versions/15904/installpage_ar.jpg";
 
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
+var trackLoadingRes = false;
+function loadingRes(obj) {
+    if(!trackLoadingRes) return;
+    var url = serverUrl + "public/loadingRes/?";
+    for(var i in obj) url += i + "=" + obj[i] + "&";
+	var img = new Image();
+	img.src = url;
+}
 
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
+var loadingStep = 0;
+function loadingStepLog(step) {
+    var biStepArr = Array(1, 2, 3, 4, 5, 6, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170);
+    for(i = 0; i < biStepArr.length; i++) {
+        if(biStepArr[i] == step) {
+            var url = serverUrl + "tracklog/sendLoadingData/?userguid=381814&step=" +  step + '&_=' + Math.floor(new Date());
+            var img = new Image();
+            img.src = url;
+        }
+    }
 
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
+    if(userTutorialStep == "0") return;
+    if(step <= loadingStep) return;
+    loadingStep = step;
+    
+    var url = serverUrl + "tracklog/updateLoading/?userguid=381814&step=" +  step + '&_=' + Math.floor(new Date());
+	var img = new Image();
+	img.src = url;
+}
+loadingStepLog(1);
+</script>
+<script type="text/javascript" src="https://d297281mgrzzms.cloudfront.net/v2/js/jquery_combo.js"></script>
+<script type="text/javascript" src="https://d297281mgrzzms.cloudfront.net/v2/js/json2.js"></script>
+<script type="text/javascript" src="//s-assets.tp-cdn.com/static3/js/api/payment_overlay.js"></script>
+<script type="text/javascript" src="https://ff2-us.funplusgame.com/js/fantasy.js?v38777.920"></script>
+<script type="text/javascript" src="https://ff2-us.funplusgame.com/js/lang_ar.js?_138777.920"></script>
+<link href="https://d297281mgrzzms.cloudfront.net/v2/versions/17615/css/ar/fbgift.css" rel="stylesheet" type="text/css" />
+<link href="https://d297281mgrzzms.cloudfront.net/v2/versions/37010/css/ar/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
 
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
+<div style="display:none;" id="rewardTemplate" url="https://ff2-us.funplusgame.com/html/reward.html"></div>
+<div style="display:none;" id="feedTemplate" url="https://ff2-us.funplusgame.com/html/facebook/feed.html"></div>
+<div style="display:none;" id="requestsTemplate" url="https://ff2-us.funplusgame.com/html/facebook/requests.html"></div>
+<div style="display:none;" id="requestsLoadingTemplate" url="https://ff2-us.funplusgame.com/html/facebook/requests_loading.html"></div>
+<div style="display:none;" id="helpPageTemplate" url="https://ff2-us.funplusgame.com/html/facebook/help_page.html"></div>
+<div style="display:none;" id="mobilePaymentTemplate" url="https://ff2-us.funplusgame.com/html/mobile_payment.html"></div>
+<div id="fb-root"></div>
 
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
+<div id="haInboxBanner"><div id="haInboxBannerContent"></div></div>
 
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
+<div style="height: 10px;"> </div><div id="haBanner"></div>
+<div id="likeBox" style="margin:0 auto; padding-left: 30px;">
+    <img id="likeArrow" style="display: none;" src="https://d297281mgrzzms.cloudfront.net/v2/versions/15597/arrow.png" />
+    <div href="https://www.facebook.com/playhappyacres" style="height: 25px; width: 550px; text-align: center;" class="fb-like" data-layout="standard" data-show_faces="false" data-action="like" data-width="550" data-height="25"></div>
+</div>
 
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
+<div style="width:98%;background-color: #FFF4BF;border: 1px solid #FFD100;margin:5px auto;padding: 6px;text-align: center;font-weight: bold;" id="likeNotice">
+	<div style="text-align: right; cursor: pointer; width: 10px; padding-right: 5px; float: right;">
+		<!-- <img src="https://d297281mgrzzms.cloudfront.net/v2/versions/16483/close.png" onclick="$('#likeNotice').hide();"> -->
+	</div>
+	<div style="height: 21px; font-size: 13px;">
+	<a href="http://get.adobe.com/flashplayer " target="_blank">قم بترقية مشغل الفلاش لديك للنسخة الاخيرة لتفادي اية مشاكل.اضغط هنا</a>	</div>
+</div>
 
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
+<div id="navs">
+    <ul>
+        <li class="selected"><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showGame();"><span>العب</span></a></li>
+        <li><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showGiftsPage();"><span>هدايا</span></a></li>
+        <li><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showInvitePage();"><span>دعوة الأصدقاء</span></a></li>
+        <li><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showAddCashPage();"><span>اضافة الألماس & عملات</span></a></li>
+        <!-- <li><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showNeighborPage();"><span>جيراني</span></a></li> -->
+        <li><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showOffers();"><span>طلبات</span></a></li>
+        <li><a href="https://www.facebook.com/playhappyacres" target="_blank"><span>صفحة المعجبين</span></a></li>
+        <li><a href="javascript:void(0);" onclick="javascript:fantasyFarm.showHelpPage();"><span>مساعدة</span></a></li>
+    </ul>
+    <div class="rightnav">
+        <a id="language_button" href="javascript: void(null);" class="lang_button" onclick="javascript:fantasyFarm.changeLangMenu();"
+                onmouseover="javascript:fantasyFarm.showLangMenu();" onmouseout="javascript:fantasyFarm.hideLangMenu();"> </a><a href="javascript: void(null);" class="lang_select" onclick="javascript:fantasyFarm.changeLangMenu();" onmouseout="javascript:fantasyFarm.hideLangMenu();">ﺎﻠﻋﺮﺒﻳﺓ</a>        <a href="javascript: void(null);" style="display: none;" onclick="javascript:fantasyFarm.requests(false);" id="inbox" class="noinbox"><span id="requestsnum"></span></a>
+    </div>
+</div>
+<div class="languages" id="change_lang" style="display:none;" onmouseOut="javascript:fantasyFarm.hideLangMenu();" onmouseOver="javascript:fantasyFarm.showLangMenu();">
+    <div class="langs">
+        <ul><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('en');">English</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('it');">Italiano</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('fr');">Français</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('de');">Deutsch</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('pt');">Português</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('nl');">Nederlands</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('es');">Español</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('pl');">Polski</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('ar');">ﺎﻠﻋﺮﺒﻳﺓ</a></li><li><a href="javascript:void(0);" onclick="javascript: fantasyFarm.changeLang('tr');">Türkçe</a></li></ul>    </div>
+</div>
+<div id="append" style="position: absolute;left:0; width: 100%; z-index:9997"></div>
+<div id="showHelp" style="position: absolute;left:0; width: 98%;"></div>
+<div id="myContent" style="min-height: 700px; background-image: url('https://d297281mgrzzms.cloudfront.net/v2/loading.png'); background-repeat: no-repeat; background-position: center center;">
+    <div id="flashContainer" style="width: 100%; height: 680px; overflow: auto;">
+        <div id="flashcontent"></div>
+    </div>
+    <div id="loading">
+        <p style="height:680px;"></p>
+    </div>
+    <img id="screenshots" src="https://d297281mgrzzms.cloudfront.net/v2/pix.gif" width="0" height="0" />
+</div>
+<div id="uid">
+snsid: 100005440955803, 
+uid: 381814, 
+lang: ar, 
+client: v38777.920</div>
+<div class="bottom_nav">
+    <a href="https://www.facebook.com/playhappyacres" target="_blank">صفحة المعجبين</a> |
+    <a href="http://funplus.com/privacy_policy/" target="_blank">شروط الخصوصية</a> |
+    <a href="http://funplus.com/tos/" target="_blank">شروط الخدمة</a> |
+    <a href="http://forums.funplusgame.com/forums/happy-acres?lang=ar_AR" target="_blank">المنتدى</a> |
+    <a href="http://support-ha.funplusgame.com?lang=ar_AR" target="_blank">تقارير سُوءُ الاستِعمال</a>
+</div>
+<br />
+<!--
+<div class="bottom_nav">
+    <span style="font-size: 14px; font-weight: bold; word-spacing: 2px; letter-spacing: 0;">Like us!: </span>
+    <a href="http://www.facebook.com/happyarces" target="_blank">English</a>
+</div>
+-->
 
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
+<div id="payment_track"></div>
+<div id="payment_sgn" style="display: none;">
+    <div style="text-align:center"><img src="https://d297281mgrzzms.cloudfront.net/v2/loading.png" /></div>
+</div>
 
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
+<br /> <br />
+<script type="text/javascript">
+var indexPayUrl = "";
+var inboxBannerTag = "";
+var bannerTag = "ipokerar";
 
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
+var fbInited = false;
+jQuery(function($) {
+    loadingStepLog(2);
+    
+    var e = document.createElement('script');
+	window.fbAsyncInit = function(){
+        if(true == fbInited) return;
+        fbInited = true;
+//        FB.init({
+//          appId      : '564728833587066',
+//          xfbml      : true,
+//          version    : 'v2.2'
+//        });
+//
+//      (function(d, s, id){
+//         var js, fjs = d.getElementsByTagName(s)[0];
+//         if (d.getElementById(id)) {return;}
+//         js = d.createElement(s); js.id = id;
+//         js.src = "//connect.facebook.net/en_US/sdk.js";
+//         fjs.parentNode.insertBefore(js, fjs);
+//       }(document, 'script', 'facebook-jssdk'));
+        
+        loadingStepLog(3);
+		fantasyFarm.fbInit();
+        
+        if(indexPayUrl != "") {
+            if(document.location.protocol == "http:") {
+                indexPayUrl = indexPayUrl.replace("https:", "http:");
+            } else if(document.location.protocol == "https:") {
+                indexPayUrl = indexPayUrl.replace("http:", "https:");
+            }
+            $.getScript(indexPayUrl);
+            $("#payment_sgn").show();
+        }
+	};
+	$(e).error(function(obj){
+		var e = document.createElement('script');
+        e.async = true;
+    	e.src = "https://d297281mgrzzms.cloudfront.net/v2/versions/22566/js/sdk.js";
+    	document.getElementById('fb-root').appendChild(e);
+	});
+	e.async = true;
+	e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
+	document.getElementById('fb-root').appendChild(e);
+    
+    setTimeout(function(){
+		if(true == fbInited) return;
+        var e = document.createElement('script');
+        e.async = true;
+    	e.src = "https://d297281mgrzzms.cloudfront.net/v2/versions/22566/js/sdk.js";
+    	document.getElementById('fb-root').appendChild(e);
+	}, 1000 * 20);
+});
 
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
+var helpPages = {"customerSupportUrl":"http:\/\/support-ha.funplusgame.com\/?lang=ar_AR","bugsAndIssuesUrl":"http:\/\/forums.funplusgame.com\/forums\/happy-acres\/bugs-bug-reporting-aa?lang=ar_AR","getHelpFromPlayersUrl":"http:\/\/forums.funplusgame.com\/forums\/happy-acres\/help-support?lang=ar_AR","guidesUrl":"http:\/\/forums.funplusgame.com\/forums\/happy-acres\/happy-acres-guides?lang=ar_AR","forumUrl":"http:\/\/forums.funplusgame.com\/forums\/happy-acres?lang=ar_AR"};
+var sr = "KOy_PVfkPok6lOzwjrNfiOG81p8r3a70IYmtKXWxgeQ.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjE0NjU5OTU2MDAsImlzc3VlZF9hdCI6MTQ2NTk4OTIxMiwib2F1dGhfdG9rZW4iOiJFQUFVVVVrMjNOZ29CQU9SbGRPdUl5SlBaQjJic25VSDBmUjNXSVdSNkZvN0trbHpBTnN6c1I4TFpDMXNKODNCWkNkd0doM3ZvMmU5MXhYRjYxV2JCWkM0Z204WkFyMnFlMlVla1lVODJaQm1aQlpDaGpaQzlMQVpCQVNIcXdHOFpDSGZ3UVpBMHVaQzZpekY0aDFLcFlzT0wxTzFaQUl1TjREWVpDT2Jib2pnc3ZIWkNaQTdFSHNBWkRaRCIsInRva2VuX2Zvcl9idXNpbmVzcyI6IkFid0VlcGhJa2pXVllVbU4iLCJ1c2VyIjp7ImNvdW50cnkiOiJ5ZSIsImxvY2FsZSI6ImFyX0FSIiwiYWdlIjp7Im1pbiI6MTgsIm1heCI6MjB9fSwidXNlcl9pZCI6IjEwMDAwNTQ0MDk1NTgwMyJ9";
+</script>
 
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
+  ga('create', 'UA-51589554-1', 'auto');
+  ga('send', 'pageview');
 
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "{}"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright {yyyy} {name of copyright owner}
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+</script>
+</body>
+</html>
